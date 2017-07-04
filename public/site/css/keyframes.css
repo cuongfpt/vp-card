@@ -1,0 +1,36 @@
+/*** SCSS CuKiNaCha 2015 - www.rikvip.com ***/
+@-webkit-keyframes vqspinlight_on { 10% { opacity: 1; } }
+@-moz-keyframes vqspinlight_on { 10% { opacity: 1; } }
+@keyframes vqspinlight_on { 10% { opacity: 1; } }
+@-webkit-keyframes vqspinlight_off { 10% { opacity: 0; } }
+@-moz-keyframes vqspinlight_off { 10% { opacity: 0; } }
+@keyframes vqspinlight_off { 10% { opacity: 0; } }
+@-webkit-keyframes vqlight_on { 50% { opacity: 1; } }
+@-moz-keyframes vqlight_on { 50% { opacity: 1; } }
+@keyframes vqlight_on { 50% { opacity: 1; } }
+@-webkit-keyframes vqlight_off { 50% { opacity: 0; } }
+@-moz-keyframes vqlight_off { 50% { opacity: 0; } }
+@keyframes vqlight_off { 50% { opacity: 0; } }
+@-webkit-keyframes btnbounce { 100% { -webkit-transform: rotate(360deg); } }
+@-moz-keyframes btnbounce { 100% { -moz-transform: rotate(360deg); } }
+@keyframes btnbounce { 100% { -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg); } }
+@-webkit-keyframes sa-c { 50% { -webkit-transform: rotate(-45deg); } }
+@-moz-keyframes sa-c { 50% { -moz-transform: rotate(-45deg); } }
+@keyframes sa-c { 50% { -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); } }
+@-webkit-keyframes spinHoverAnim { 0% { -webkit-transform: scale(1); }
+  10% { -webkit-transform: scale(1.2); }
+  20% { -webkit-transform: scale(0.9); }
+  30% { -webkit-transform: scale(1.1); }
+  40% { -webkit-transform: scale(1); } }
+@-moz-keyframes spinHoverAnim { 0% { -moz-transform: scale(1); }
+  10% { -moz-transform: scale(1.2); }
+  20% { -moz-transform: scale(0.9); }
+  30% { -moz-transform: scale(1.1); }
+  40% { -moz-transform: scale(1); } }
+@keyframes spinHoverAnim { 0% { -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); transform: scale(1); }
+  10% { -webkit-transform: scale(1.2); -moz-transform: scale(1.2); -ms-transform: scale(1.2); -o-transform: scale(1.2); transform: scale(1.2); }
+  20% { -webkit-transform: scale(0.9); -moz-transform: scale(0.9); -ms-transform: scale(0.9); -o-transform: scale(0.9); transform: scale(0.9); }
+  30% { -webkit-transform: scale(1.1); -moz-transform: scale(1.1); -ms-transform: scale(1.1); -o-transform: scale(1.1); transform: scale(1.1); }
+  40% { -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); transform: scale(1); } }
+
+/*# sourceMappingURL=keyframes.css.map */

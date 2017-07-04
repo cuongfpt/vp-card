@@ -1,1 +1,2 @@
-# vp-card
+# vinplay-news
+Trang tin tuc vinplay
