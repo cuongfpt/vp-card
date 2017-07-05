@@ -1125,6 +1125,8 @@ padding-left: 25px;
     text-decoration: none;
     background: url("../images/arrow.png") no-repeat scroll 5px 5px;
     padding-left: 15px;
+    width: 100%;
+    float: left;
 }
 .tabs-menu {
     height: 40px;
@@ -1270,6 +1272,19 @@ padding-left: 25px;
     margin-top: 10px;
     margin-left: 10px;
     margin-bottom: 10px;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    line-height:200px;
+}
+::-webkit-textarea-placeholder { /* Webkit */
+    line-height:200px;
+}
+:-ms-textarea-placeholder { /* IE */
+    line-height:200px;
+}
+.cat-faq li a p{
+    width: 80%;
+    float: left;
 }
 /*live chat facebook*/
 .hisella-messages { position: fixed; bottom: 0; right: 0; z-index: 999999; }

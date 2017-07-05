@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class FAQ extends MY_Controller
+class Contact extends MY_Controller
 {
     function __construct()
     {
@@ -10,6 +10,7 @@ class FAQ extends MY_Controller
         $this->load->model('Category_model');
         $this->load->model('News_model');
         $this->load->model('Adv_model');
+         $this->load->model('Contact_model');
     }
 function index(){  
         //list tin faq
@@ -21,27 +22,25 @@ function index(){
         // list menu footer
         $menufooter = $this->Category_model->get_category_footer();
         $this->data['menufooter'] = $menufooter;
-        //list menu faq
-        $menufaq = $this->Category_model->get_category_by_faq();
-        $this->data['menufaq'] = $menufaq;
+       
         //list faq
-        $list = $this->Faq_model->get_list_faq();
+        $list = $this->Category_model->get_list_contact();
         $this->data['list'] = $list;
         //listpartner
         $listPartner= $this->Adv_model->get_adv_by_position(2);
         $this->data['Partner'] =$listPartner;
 
-        $this->data['temp'] = 'site/faq/faq-cat';
+        $menuContact = $this->Category_model->get_category_by_contact();
+        $this->data['menuContact'] = $menuContact;
+
+        $this->data['temp'] = 'site/contact/index';
         $this->load->view('site/main-cat', $this->data);
     }
-
-    function detail()
-    {
+function detail(){  
         $last = end($this->uri->segments);
         if (preg_match_all('/\d+/', $last, $numbers))
             $id = end($numbers[0]);
-        $info = $this->Faq_model->get_info($id);
-        $this->data['info'] = $info;
+        var_dump($id);
         //list tin faq
         $listfaq = $this->Faq_model->get_list_faq();
         $this->data['faq'] = $listfaq;
@@ -51,40 +50,19 @@ function index(){
         // list menu footer
         $menufooter = $this->Category_model->get_category_footer();
         $this->data['menufooter'] = $menufooter;
-        //list menu faq
-        $menufaq = $this->Category_model->get_category_by_faq();
-        $this->data['menufaq'] = $menufaq;
-        //listpartner
-        $listPartner= $this->Adv_model->get_adv_by_position(2);
-        $this->data['Partner'] =$listPartner;
-
-        $this->data['temp'] = 'site/faq/index';
-        $this->load->view('site/main-cat', $this->data);
-    }
-    function catfaq(){
-        $last = end($this->uri->segments);
-        if (preg_match_all('/\d+/', $last, $numbers))
-            $id = end($numbers[0]);
-        //list tin faq
-        $listfaq = $this->Faq_model->get_list_faq();
-        $this->data['faq'] = $listfaq;
-        //list guide
-        $listguide = $this->News_model->get_list_news_Guide();
-        $this->data['guide'] = $listguide;
-        // list menu footer
-        $menufooter = $this->Category_model->get_category_footer();
-        $this->data['menufooter'] = $menufooter;
-        //list menu faq
-        $menufaq = $this->Category_model->get_category_by_faq();
-        $this->data['menufaq'] = $menufaq;
+       
         //list faq
-        $list = $this->Faq_model->get_list_faq_by_catid($id);
+        $list = $this->Category_model->get_list_contact_by_catid($id);
         $this->data['list'] = $list;
         //listpartner
         $listPartner= $this->Adv_model->get_adv_by_position(2);
         $this->data['Partner'] =$listPartner;
 
-        $this->data['temp'] = 'site/faq/faq-cat';
+        $menuContact = $this->Category_model->get_category_by_contact();
+        $this->data['menuContact'] = $menuContact;
+
+        $this->data['temp'] = 'site/contact/index';
         $this->load->view('site/main-cat', $this->data);
     }
+   
 }

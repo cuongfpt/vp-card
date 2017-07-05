@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
     'dsn'	=> '',
-     'hostname' => 'localhost',
-     'username' => 'root',
-     'password' => '123456',
+     'hostname' => '210.211.101.225',
+     'username' => 'vinplay',
+     'password' => '5hhQlxcF5DTGt0CxhoXf',
      'database' => 'vinplay_card',
     'dbdriver' => 'mysqli',
     'dbprefix' => '',
@@ -92,6 +92,6 @@ $db['default'] = array(
     'compress' => FALSE,
     'stricton' => FALSE,
     'failover' => array(),
-    'port'=>'3306',
+    'port'=>'3307',
     'save_queries' => TRUE
 );

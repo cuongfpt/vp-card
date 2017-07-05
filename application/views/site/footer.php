@@ -66,15 +66,24 @@
                 <ul class="list-inline">
                     <li><a href="/">Trang chủ</a></li>
                     <?php foreach ($menufooter as $row): ?>
-                        <?php if ($row->typepage == 1): ?>
+                        <?php if ($row->typepage == 1){ ?>
                             <li>
                                 <a href="<?php echo base_url('huong-dan/' . $row->seolink . '-' . $row->id) ?>"><?php echo $row->catname ?></a>
                             </li>
-                        <?php else: ?>
+                        <?php } else if ($row->typepage == 4){ ?>
+                            <li>
+                                <a href="<?php echo base_url('hoi-dap')?>"><?php echo $row->catname ?></a>
+                            </li>
+                                
+                        <?php } else if ($row->typepage == 5){ ?>
+                            <li>
+                                <a href="<?php echo base_url('lien-he') ?>"><?php echo $row->catname ?></a>
+                            </li>
+                        <?php } else {?>
                             <li>
                                 <a href="<?php echo base_url('danh-muc/' . $row->seolink . '-' . $row->id) ?>"><?php echo $row->catname ?></a>
                             </li>
-                        <?php endif ?>
+                        <?php }?>
                     <?php endforeach ?>
 
 

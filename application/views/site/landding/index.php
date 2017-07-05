@@ -145,7 +145,7 @@
                 <table>
                     <tr>
                         <td><input type="text" placeholder="Tên bạn .." id="txtfullname"></td>
-                        <td><input type="text" class="mg" placeholder="Email.." id="txtemail"></td>
+                        <td><input type="text"  placeholder="Email.." id="txtemail"></td>
                     </tr>
                     <tr>
                         <td colspan="2">

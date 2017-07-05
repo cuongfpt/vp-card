@@ -14,10 +14,6 @@
                                 <div class="item_game">
                                     <a href="<?php echo base_url('bai-viet/' . $row->seolink . '-' . $row->id) ?>"><img
                                             src="<?php echo public_url('uploads/news/' . $row->images) ?>"></a>
-
-                                    <div class="name_game"><a class="title_new"
-                                                              href="<?php echo base_url('bai-viet/' . $row->seolink . '-' . $row->id) ?>"><?php echo $row->displayName ?></a>
-                                    </div>
                                 </div>
                             </li>
                         <?php endforeach ?>
