@@ -1,4 +1,4 @@
-<div class="contain_right">
+<div class="contain_right col-md-3">
     <div class="news">
         <div class="title-news"><span>Tin tức - khuyến mãi</span></div>
         <?php if (!empty($listsale)): ?>

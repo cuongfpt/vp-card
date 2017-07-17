@@ -40,7 +40,6 @@ function detail(){
         $last = end($this->uri->segments);
         if (preg_match_all('/\d+/', $last, $numbers))
             $id = end($numbers[0]);
-        var_dump($id);
         //list tin faq
         $listfaq = $this->Faq_model->get_list_faq();
         $this->data['faq'] = $listfaq;

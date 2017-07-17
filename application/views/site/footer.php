@@ -40,6 +40,7 @@
         </div>
     </div>
 </div>
+
 <div class="contain_partner">
     <div class="payment">
         <div class="partner">

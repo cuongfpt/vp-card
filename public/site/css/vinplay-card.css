@@ -37,7 +37,7 @@ html {
 
 }
 .contain{
-    width: 1400px;
+    width: 1200px;
     margin: 0 auto;
 }
 .header {
@@ -98,13 +98,15 @@ html {
     float: left;
 }
 .contain_left{
-    width: 79%;
+    width: 900px;
     float: left;
+    padding: 0px;
 }
 .contain_right{
     float: left;
-    width: 20%;
-    margin-left: 1%;
+    width: 280px;
+    margin-left: 20px;
+    padding: 0px;
 }
 .game-card{
     float: left;
@@ -115,7 +117,7 @@ html {
 .bar-card{
     width: 100%;
     float: left;
-    height: 70px;
+    height: 50px;
     background: #1B1464;
 }
 .title{
@@ -154,19 +156,16 @@ html {
     padding-left: 11px;
     padding-right: 11px;
     margin-bottom: 10px;
+    width: 23%;
 }
 
 .item_game{
-    width: 245px;
     float: left;
-
     background: #fff;
 }
 .item_game img{
-    display: block;
-    margin: 0 auto;
-    width: 220px;
-    height: 220px;
+    width: 100%;
+    padding: 5px
 }
 .name_game{
     width: 100%;
@@ -190,26 +189,31 @@ html {
     border: 1px solid #e3e3e3;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    margin-left: 0px;
+    margin-right: 0px;
 }
 .title-news{
     font-size: 20px;
     float: left;
     text-transform: uppercase;
-    color: #000;
+    color: #fff;
     line-height: 53px;
     height: 50px;
     width: 100%;
-    border-bottom: 3px solid #dcdcdc;
+    background: #1B1464;
+   
 }
 .title-news span{
-    border-bottom: 3px solid #D40003;
+    
     height: 50px;
     display: inline-block;
     padding-left: 10px;
+    width: 100%;
 }
 .news ul{
     float: left;
     width: 100%;
+    margin-top: 10px;
 }
 .news ul li{
     float: left;
@@ -258,7 +262,7 @@ html {
     width: 100%;
 }
 .contain_content{
-    width: 1300px;
+    width: 1200px;
     margin: 0 auto;
 }
 .item_bottom{
@@ -281,6 +285,7 @@ html {
 }
 .content_bottom img{
   float: left;
+  width: 100%
 }
 .content_bottom ul{
     float: left;
@@ -1292,3 +1297,53 @@ padding-left: 25px;
 #hisella-minimize { background: #3b5998; font-size: 18px; color: #fff; padding: 3px 10px; position: absolute; top: -40px; left: 0px;  cursor: pointer;width: 100%;height: 40px;float: left; text-align: left;line-height: 40px}
 @media screen and (max-width:768px){ #hisella-facebook { opacity:0; } .hisella-messages { bottom: -300px; right: 0px; } }
 /**************************************************************************************************landding*********************************************************************************/
+@media (max-width: 1360px){
+    .contain_left {
+        width: 700px;
+        float: left;
+        padding: 0px;
+        }
+    .contain {
+        width: 1000px;
+        margin: 0 auto;
+}
+    .contain_content {
+         width: 1000px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 1158px){
+    .contain_left {
+        width: 500px;
+        float: left;
+        padding: 0px;
+        }
+    .contain {
+        width: 800px;
+        margin: 0 auto;
+}
+    .contain_content {
+         width: 800px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 930px){
+    .contain_left {
+        width: 100%;
+        float: left;
+        padding: 0px;
+        }
+    .contain {
+        width: 100%;
+        margin: 0 auto;
+        }
+    .contain_content {
+         width: 100%;
+        margin: 0 auto;
+     }
+    .partner {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+}
