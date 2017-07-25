@@ -1,6 +1,44 @@
-<div class="contain_bottom">
-    <div class="contain_content">
 
+ 
+<div class="contain_bottom">
+<div id="accordion">
+  <h3>Điểm bán thẻ vinplay</h3>
+  <div>
+    <img src="<?php echo public_url("/site/images/diem-ban.png") ?> ">
+  </div>
+  <h3>Câu hỏi thường gặp</h3>
+  <div>
+   <div class="content_bottom">
+                <?php if (!empty($faq)): ?>
+                    <ul>
+                        <?php foreach ($faq as $row): ?>
+
+                            <li>
+                                <a href="<?php echo base_url('hoi-dap/' . $row->seolink . '-' . $row->id) ?>"> <?php echo $row->question ?></a>
+                            </li>
+                        <?php endforeach ?>
+
+                    </ul>
+                <?php endif ?>
+            </div>
+  </div>
+  <h3>Hướng dẫn</h3>
+  <div>
+    <div class="content_bottom">
+                <?php if (!empty($guide)): ?>
+                    <ul>
+                        <?php foreach ($guide as $row): ?>
+                            <li>
+                                <a href="<?php echo base_url('huong-dan/' . $row->seolink . '-' . $row->id) ?>"><?php echo $row->title ?></a>
+                            </li>
+                        <?php endforeach ?>
+
+                    </ul>
+                <?php endif ?>
+            </div>
+  </div>
+</div>
+    <div class="contain_content">
         <div class="item_bottom">
             <div class="title_bottom">Điểm bán thẻ vinplay</div>
             <div class="content_bottom">
@@ -160,3 +198,8 @@
         }
     });
 </Script>
+ <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>

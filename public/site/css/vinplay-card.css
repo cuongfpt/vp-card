@@ -1291,6 +1291,50 @@ padding-left: 25px;
     width: 80%;
     float: left;
 }
+.topmenu{display: none}
+.m-expand {
+    background: transparent url(../images/search-menu.png) no-repeat scroll center center;
+    cursor: pointer;
+    display: none;
+    float: left;
+    height: 36px;
+    width: 36px;
+    margin: 5px 0px 0px 10px;
+}
+.menu_mobie .mdland-navigator {
+    margin-right: 250px;
+    position: relative;
+    z-index: 1;
+}
+.navbar-nav {
+    margin: 7.5px -15px;
+}
+
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.menu_mobie .mdland-navigator li {
+    margin-right: 10px;
+}
+
+.menu_mobie .mdland-navigator .mn-desktop {
+    color: #666666;
+    line-height: 35px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.menu_mobie .logo {
+    float: left;
+    padding-top: 6px;
+    position: relative;
+    z-index: 2;
+    width: 200px;
+}
+#accordion {
+    display: none;
+}
 /*live chat facebook*/
 .hisella-messages { position: fixed; bottom: 0; right: 0; z-index: 999999; }
 .hisella-messages-outer { position: relative; }
@@ -1346,4 +1390,101 @@ padding-left: 25px;
         margin: 0 auto;
     }
     
+}
+@media (max-width: 767px){
+    .contain_content{
+        display: none;
+    }
+    #accordion {
+    display: block;
+}
+    .header {
+   background: none;
+    height: 58px;
+    width: 100%;
+    float: left;
+}
+.header_left{display: none;}
+.header_right{display: none;}
+    .topmenu {
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+    display: block;
+}
+.menu_mobie .logo-mobile {
+    display: block;
+   
+    margin-left: 0px;
+}
+.menu_mobie {
+    background: #1b1464;
+    position: relative;
+    height: 58px;
+}
+.m-expand {
+    display: block;
+        margin: 10px 0px 0px 0px;
+}
+.menu_mobie .logo {
+    display: block;
+    padding-top: 5px;
+}
+.menu_mobie .menu-navigator {
+    display: none;
+}
+.menu_mobie .logo img {
+    max-width: 170px;
+}
+.contain_right {
+    float: left;
+     width: auto; 
+    margin-left: 20px;
+    padding: 0px;
+}
+.menu_footer {
+    width: 100%;s
+    margin: 0 auto;
+    padding: 5px 0px;
+}
+.menu-bottom-footer ul li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.logo_footer img {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+}
+.line_ft {
+   display: none;
+}
+.paymentslider {
+    margin: 0px 0px 0px 10px;
+    border-left: 1px solid #dcdcdc;
+    padding-left: 8px;
+    float: left;
+    width: 100%;
+}
+.game_card_item ul li {
+    float: left;
+    display: inline;
+    padding-left: 11px;
+    padding-right: 11px;
+    margin-bottom: 10px;
+    width: 50%;
+}
+}
+@media (max-width: 480px){
+.game_card_item ul li {
+    float: left;
+    display: inline;
+    padding-left: 11px;
+    padding-right: 11px;
+    margin-bottom: 10px;
+    width: 100%;
+}
 }

@@ -1,5 +1,5 @@
 <div class="contain ">
-    <div class="contain_left col-md-8">
+    <div class="contain_left col-md-8 col-xs-12 col-sm-12">
         <div class="game-card">
             <div class="bar-card">
                 <div class="title">Game nạp thẻ vinplay

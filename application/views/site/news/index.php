@@ -5,6 +5,7 @@
                 <h1 class="tittle_news"><?php echo $info->title ?></h1>
 
                 <div class="text-detail">
+                <p><?php echo $info->description ?></p>
                     <p><?php echo $info->content ?></p>
                 </div>
             </div>
@@ -13,4 +14,10 @@
         <?php $this->load->view('site/right') ?>
     </div>
 </div>
+
+<script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
 <?php $this->load->view('site/footer') ?>
