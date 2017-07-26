@@ -130,6 +130,7 @@
             <?php endif ?>
         </div>
     </div>
+    
     <div class="line_ft"><img src="<?php echo public_url("/site/images/line.jpg") ?> "></div>
     <div class="logo_footer"><a href="<?php echo base_url("/") ?>"><img
                 src="<?php echo public_url("/site/images/logo.png") ?> "></a></div>

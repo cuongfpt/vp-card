@@ -1,4 +1,4 @@
-<html>
+<html class="mm-opened mm-background mm-opening">
 <head>
     <?php $this->load->view('site/head') ?>
 </head>

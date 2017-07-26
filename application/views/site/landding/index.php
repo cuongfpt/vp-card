@@ -3,7 +3,7 @@
     <?php if ($i == 1): ?>
         <div class="slider">
         <img src="<?php echo public_url("uploads/landding/" . $row->bg1) ?>" style="width: 100%">
-        <div class="reason">
+        <div class="reason" id="reason">
             <div class="reason_text">
                 <div class="content">
                     <p><span class="n1"></span> <span style="color: #F7931E;font-weight: bold">4 lý do</span> bạn </p>
@@ -15,7 +15,11 @@
             </div>
             <div class="option_card">
                 <ul>
-
+                    <li>
+                        <div class="item_option1">
+                           
+                        </div>
+                    </li>    
                     <li>
                         <div class="item_option">
                             <div class="top_option1"><span><?php echo $row->titlers1 ?></span></div>
@@ -45,36 +49,34 @@
                             <div class="top_option4"><span>MỆNH GIÁ THẺ ĐA DẠNG VÀ CÓ GIÁ TRỊ LỚN</span></div>
                             <div class="mid_option4">
                                 <div class="top_text">các mệnh giá bao gồm</div>
-                                <ul>
-                                    <li class="old"><a>#20.000 VND</a>
+                                    <div class="old">
+                                        <a>#20.000 VND</a>
+                                        <div class="icon-check"></div>
+                                    </div>
+                                    <div class="event"><a>#50.000 VND</a>
 
                                         <div class="icon-check"></div>
-                                    </li>
-                                    <li class="event"><a>#50.000 VND</a>
+                                    </div>
+                                    <div class="old"><a>#100.000 VND</a>
 
                                         <div class="icon-check"></div>
-                                    </li>
-                                    <li class="old"><a>#100.000 VND</a>
+                                    </div>
+                                    <div class="event"><a>#200.000 VND</a>
 
                                         <div class="icon-check"></div>
-                                    </li>
-                                    <li class="event"><a>#200.000 VND</a>
+                                    </div>
+                                    <div class="old"><a>#500.000 VND</a>
 
                                         <div class="icon-check"></div>
-                                    </li>
-                                    <li class="old"><a>#500.000 VND</a>
+                                    </div>
+                                    <div class="event"><a>#1.000.000 VND</a>
 
                                         <div class="icon-check"></div>
-                                    </li>
-                                    <li class="event"><a>#1.000.000 VND</a>
+                                    </div>
+                                    <div class="old"><a>#2.000.000 VND</a>
 
                                         <div class="icon-check"></div>
-                                    </li>
-                                    <li class="old"><a>#2.000.000 VND</a>
-
-                                        <div class="icon-check"></div>
-                                    </li>
-                                </ul>
+                                    </div>
                             </div>
                             <div class="bot_option4"></div>
                         </div>
@@ -82,7 +84,7 @@
                 </ul>
             </div>
         </div>
-        <div class="guide" style="background-image: url(<?php echo public_url("uploads/landding/" . $row->bg2);?>)">
+        <div class="guide" id="guide" style="background-image: url(<?php echo public_url("uploads/landding/" . $row->bg2);?>)">
             <div class="guide_text"><?php echo $row->titleguide ?>
                 <div class="line_ft"><img src="<?php echo public_url("/site/images/line.jpg") ?> "></div>
             </div>
@@ -127,7 +129,7 @@
                 </div>
             </div>
         </div>
-        <div class="vincard" style="background-image: url(<?php echo public_url("uploads/landding/" . $row->bg3);?>)">
+        <div class="vincard" id="vincard" style="background-image: url(<?php echo public_url("uploads/landding/" . $row->bg3);?>)">
                 <img src="<?php echo public_url("uploads/landding/" . $row->imagescard) ?>">
             <div class="vincard_text">
                 <?php echo $row->titlevincard ?>
@@ -136,7 +138,7 @@
                 <a href="<?php echo $row->link ?>"><img src="<?php echo public_url("/site/images/xem.png") ?> "></a>
             </div>
         </div>
-        <div class="contact" style="background-image: url(<?php echo public_url("uploads/landding/" . $row->bg4);?>)">
+        <div class="contact" id="contact" style="background-image: url(<?php echo public_url("uploads/landding/" . $row->bg4);?>)">
             <div class="contact_text"> Liên hệ với chúng tôi
                 <div class="line_ft"><img src="<?php echo public_url("/site/images/line.jpg") ?> ">
                 </div>
