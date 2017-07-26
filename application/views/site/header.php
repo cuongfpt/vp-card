@@ -22,7 +22,7 @@
                     <ul class="list_item_panel">
                        <li>
                            <a class="logo-mobile" href="<?php echo base_url("/")?>">
-                                 <img src="<?php echo public_url("/site/images/logo.png") ?>"></a>
+                             <img src="<?php echo public_url("/site/images/logo.png") ?>"></a>
                         </li>
                             <?php foreach ($menufooter as $row): ?>
                                 <?php if ($row->typepage == 1){ ?>

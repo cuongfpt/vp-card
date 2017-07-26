@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class FAQ extends MY_Controller
+class Faq extends MY_Controller
 {
     function __construct()
     {
