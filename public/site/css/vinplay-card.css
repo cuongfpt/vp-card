@@ -235,7 +235,7 @@ html {
 .images_news img{
   display: block;
     margin: 0 auto;
-    width: 100px;
+    width: 83px;
 }
 .description_news{
     float: left;
@@ -1487,6 +1487,11 @@ padding-left: 25px;
         width: 100%;
         float: left;
     }
+    .images_news img {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+}
     .header_left{display: none;}
     .header_right{display: none;}
         .topmenu {
