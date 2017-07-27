@@ -1,4 +1,4 @@
-<div class="news-sale col-md-3">
+<div class="news-sale col-md-4">
     <div class="title-news-sale" style="padding-top: 20px;">
             <a href="/tin-tuc">Tin tức - Khuyến mại <i class="fa fa-angle-right"></i></a>
         </div>
@@ -28,14 +28,14 @@
                
                  <?php endif ?>
     </div>
-    <div class="news-sale col-md-3">
+    <div class="news-sale col-md-4">
         <div class="fb-page" data-href="<?php echo $linkface ?>" data-small-header="false"
              data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
             <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a
                     href="<?php echo $linkface ?>">VinPlay.com</a></blockquote>
         </div>
     </div>
-    <div class="news-sale col-md-3">
+    <div class="news-sale col-md-4">
          <?php if (!empty($adv)): ?>
         <?php foreach ($adv as $row): ?>
             <div style="padding: 10px 0px 0px 0px;">

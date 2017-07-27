@@ -1,27 +1,22 @@
-<div class="contain ">
-    <div class="contain_left col-md-8 col-xs-12 col-sm-12">
-        <div class="game-card">
-            <div class="bar-card">
-                <div class="title">Game nạp thẻ vinplay
-                </div>
-            </div>
-            <div class="game_card_item">
+<div class="news clearfix">
+    <div class="slider-news col-md-8">
+    <div class="title-news-sale" style="padding-left: 20px;">
+        <h1 class="h1GameNapThe">
+                <a href="#" style="font-weight: bold;">Game nạp thẻ vinplay
+                    <i class="fa fa-angle-right"></i></a>
+            </h1>
+    </div>
+    <div id="con">
+            <div id="gallery-it">
                 <?php if (!empty($listhome)): ?>
-                    <ul>
-                        <?php foreach ($listhome as $row): ?>
-                            <li>
-                                <div class="item_game col-sm-12 col-xs-12 col-md-12 ">
-                                    <?php if($row->description=="" || $row->body==""):?>
-                                    <a href="#"><img
-                                            src="<?php echo public_url('uploads/news/' . $row->images) ?>"></a>
-                                    <?php else:?>
-                                         <a href="<?php echo base_url('bai-viet/' . $row->seolink . '-' . $row->id) ?>"><img
-                                            src="<?php echo public_url('uploads/news/' . $row->images) ?>"></a>
-                                    <?php endif?>        
-                                </div>
-                            </li>
-                        <?php endforeach ?>
-                    </ul>
+                     <?php foreach ($listhome as $row): ?>
+                         <?php if($row->description=="" || $row->body==""):?>
+                            <a href="#"><img src="<?php echo public_url('uploads/news/' . $row->images) ?>"><span> </span></a>
+                        <?php else:?>
+                             <a href="<?php echo base_url('bai-viet/' . $row->seolink . '-' . $row->id) ?>">
+                             <img src="<?php echo public_url('uploads/news/' . $row->images) ?>"><span> </span></a>
+                         <?php endif?> 
+                     <?php endforeach ?>
                 <?php endif ?>
             </div>
         </div>

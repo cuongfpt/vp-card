@@ -1,9 +1,7 @@
-<div class="content-user">
-    <div class="contain_cat">
-        <div class="contain_left">
-            <div class="info-new-detail">
-                <div id="tabs-container">
-                    <ul class="tabs-menu">
+<div class="content-user clearfix">
+    <div class="container news-content">
+        <div class="items-left">
+            <ul class="tabs-menu">
                         <?php $i = 1; ?>
                         <?php if (!empty($listcat)): ?>
                             <?php foreach ($listcat as $row): ?>
@@ -30,11 +28,13 @@
                             <?php endforeach ?>
                         <?php endif ?>
                     </div>
-                </div>
-            </div>
-
         </div>
-        <?php $this->load->view('site/right') ?>
+
+        <div class="items-right">
+            <div class="app-right">
+                 <?php $this->load->view('site/right') ?>
+            </div>
+        </div>
     </div>
 </div>
 <?php $this->load->view('site/footer') ?>

@@ -1,4 +1,4 @@
-<div class="content_faq">
+<!-- <div class="content_faq">
     <div class="bar-card mg">
         <div class="title">Hướng dẫn</div>
     </div>
@@ -25,16 +25,45 @@
             </div>
         </div>
     </div>
+</div> -->
+<div class="content-user clearfix">
+    <div class="container news-content clearfix">
+        <h3 style="color: #fff; background: #592fa9; border-radius: 3px; padding:5px">HƯỚNG DẪN</h3>
+        <div class="col-sm-3 col-md-3" style="padding-right: 0; padding-left: 0;">
+         <?php if ($listcat != null): ?>
+            <?php foreach ($listcat as $row): ?>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse8" id="<?php echo $row->id?>" class="collapsed" aria-expanded="false"><span class=""></span><?php echo $row->catname?></a>
+                        </h4>
+                    </div>
+                    <div id="collapse8" class="panel-collapse collapse" aria-expanded="false" style="height: 646px;">
+                    </div>
+                 </div>
+              <?php endforeach ?>
+         <?php endif ?>
+        </div>
+    <div class="col-sm-9 col-md-9" style="padding-right: 0;">
+        <div class="well">
+            <h1>
+                <span ><?php echo $info->title ?></span></h1>
+            <div class="text-detail">
+                 <p><?php echo $info->content ?></p>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 <?php $this->load->view('site/footer') ?>
 <script>
     $(document).ready(function () {
-        listnew($("#nav > li > a").attr('id'));
-        $('#nav > li > a').click(function(){
+        listnew($(".panel-title > a").attr('id'));
+        $('.panel-title > a').click(function(){
             if ($(this).attr('class') != 'active'){
-                $('#nav li ul').slideUp();
+                $('#collapse8').slideUp();
                 $(this).next().slideToggle();
-                $('#nav li a').removeClass('active');
+                $('panel-title > a').removeClass('active');
                 $(this).addClass('active');
             }
             listnew($(this).attr('id'));
@@ -50,17 +79,21 @@
             },
             dataType: "text",
             success: function (data) {
-
-                $.each(JSON.parse(data), function(k, value) {
-                    ht+='<li>';
-                    ht+='<a  href="../huong-dan/'+value.seoLink+'-'+value.id+'">';
-                    ht+= value.title;
-                    ht+= '</a>';
-                    ht+='</li>';
-                });
-
-                $(".sub").html(ht);
-
+                    ht+='<div class="panel-body">';
+                    ht+='         <table class="table">';
+                    ht+='           <tbody>';
+                    $.each(JSON.parse(data), function(k, value) {
+                        ht+=' <tr>';
+                        ht+='   <td>';
+                        ht+='     <span class="text-primary"></span>';
+                        ht+='      <a href="../huong-dan/'+value.seoLink+'-'+value.id+'">'+value.title+'</a>';
+                        ht+='   </td>';
+                        ht+=' </tr>';
+                    });
+                    ht+='           </tbody>';
+                    ht+='        </table>';
+                    ht+='</div>';
+                $("#collapse8").html(ht);
             }
         });
     }
