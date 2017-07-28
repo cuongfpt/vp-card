@@ -51,7 +51,7 @@
                                             <ul class="alias-footer">
                                                 <li class="fa fa-caret-right">
                                                     <h3 class="h3TitleGuide">
-                                                      <a href="<?php echo base_url('huong-dan/' . $row->seolink . '-' . $row->id) ?>"><p><?php echo $row->title ?></p></a>
+                                                      <a href="<?php echo base_url('huong-dan/' . $row->seolink . '-' . $row->id) ?>"><?php echo $row->title ?></a>
                                                     </h3>
                                                 </li>
                                             </ul>
