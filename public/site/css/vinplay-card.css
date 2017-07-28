@@ -1220,7 +1220,7 @@ padding-left: 25px;
     color: #000;
 }
 #nav li a:hover, #nav li a.active {
-    background: #999;
+   
     color: #fff;
 }
 #nav li ul {
@@ -1460,7 +1460,7 @@ padding-left: 25px;
     }
 
     .mm-list > li:hover > a, .mm-list > li:hover > span {
-        background: #1561ac;
+       
         color: #fff;
     }
 

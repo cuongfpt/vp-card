@@ -1,34 +1,7 @@
-<!-- <div class="content_faq">
-    <div class="bar-card mg">
-        <div class="title">Hướng dẫn</div>
-    </div>
-    <div class="contain_faq mg">
-        <div class="faq_left">
-            <ul id="nav">
-                <?php if ($listcat != null): ?>
-                        <?php foreach ($listcat as $row): ?>
-                            <li><a href="#" id="<?php echo $row->id?>"><?php echo $row->catname?></a>
-                                <ul class="sub">
 
-                                </ul>
-                            </li>
-                        <?php endforeach ?>
-                <?php endif ?>
-            </ul>
-        </div>
-        <div class="faq_right">
-            <div class="info-new-detail">
-                <h1 class="tittle_news"><?php echo $info->title ?></h1>
-                <div class="text-detail">
-                    <p><?php echo $info->content ?></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
 <div class="content-user clearfix">
     <div class="container news-content clearfix">
-        <h3 style="color: #fff; background: #592fa9; border-radius: 3px; padding:5px">HƯỚNG DẪN</h3>
+        <h3 style="color: #fff; background: #1b1464; border-radius: 3px; padding:5px">HƯỚNG DẪN</h3>
         <div class="col-sm-3 col-md-3" style="padding-right: 0; padding-left: 0;">
          <?php if ($listcat != null): ?>
             <?php foreach ($listcat as $row): ?>

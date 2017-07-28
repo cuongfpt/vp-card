@@ -65,7 +65,7 @@ Class Category_model extends MY_Model
     }
       function get_list_contact()
     {
-        
+         $this->db->where('typepage',5);
         $query = $this->db->get($this->table);
 
         if ($query->result()) {
