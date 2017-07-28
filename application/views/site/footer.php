@@ -8,10 +8,10 @@
                                 <div class="hi-items">
                                     <p class="title">
                                         <strong>
-                                            <a href="diem-ban" style="color: #592fa9">ĐIỂM BÁN THẺ VINPLAY CARD
+                                            <a href="#" style="color: #592fa9">ĐIỂM BÁN THẺ VINPLAY CARD
                                             </a></strong>
                                     </p>
-                                    <a href="diem-ban">
+                                    <a href="#">
                                         <img src="<?php echo public_url("/site/images/diem-ban.png") ?> "></a>
                                 </div>
                             </li>
