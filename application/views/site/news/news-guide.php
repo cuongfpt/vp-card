@@ -79,20 +79,22 @@
             },
             dataType: "text",
             success: function (data) {
-                    ht+='<div class="panel-body">';
-                    ht+='         <table class="table">';
-                    ht+='           <tbody>';
+                  
                     $.each(JSON.parse(data), function(k, value) {
+                        ht+='<div class="panel-body">';
+                        ht+='         <table class="table">';
+                        ht+='           <tbody>';
                         ht+=' <tr>';
                         ht+='   <td>';
                         ht+='     <span class="text-primary"></span>';
                         ht+='      <a href="../huong-dan/'+value.seoLink+'-'+value.id+'">'+value.title+'</a>';
                         ht+='   </td>';
                         ht+=' </tr>';
+                        ht+='           </tbody>';
+                        ht+='        </table>';
+                        ht+='</div>';
                     });
-                    ht+='           </tbody>';
-                    ht+='        </table>';
-                    ht+='</div>';
+                   
                 $("#collapse8").html(ht);
             }
         });

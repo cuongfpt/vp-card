@@ -51,6 +51,15 @@ html {
 .main-slider {
     margin-bottom: 40px;
 }
+.panel-body {
+    padding: 0px;
+}
+.panel-body .table {
+    margin-bottom: 0px;
+}
+.panel-body .table a{
+   font-size: 14px;
+}
 .header {
     background-color: #1B1464;
     background: -moz-radial-gradient(center center, ellipse closest-side, #1B1464 0%, #1B1464 100%);
