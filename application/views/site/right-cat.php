@@ -1,4 +1,6 @@
-<div class="news-sale col-md-4">
+ <div class="items-right">
+        <div class="app-right">
+<div class="news-sale col-md-4" style="margin-bottom: 10px">
     <div class="title-news-sale" style="padding-top: 20px;">
             <a href="/tin-tuc">Tin tức - Khuyến mại <i class="fa fa-angle-right"></i></a>
         </div>
@@ -28,25 +30,25 @@
                
                  <?php endif ?>
     </div>
-    <div class="news-sale col-md-4">
-        <div class="fb-page" data-href="<?php echo $linkface ?>" data-small-header="false"
-             data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-            <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a
-                    href="<?php echo $linkface ?>">VinPlay.com</a></blockquote>
-        </div>
+  
+    <div class="items-right col-md-4" style="padding: 0px;margin: 0px">
+
+       <div class="fb-page" data-href="<?php echo $linkface?>" data-tabs="timeline" data-width="320" data-height="200" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="<?php echo $linkface?>" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ShopMyPhamQuanAoOder/">Vinplay.</a></blockquote></div>
     </div>
-    <div class="news-sale col-md-4">
+    <div class="items-right col-md-4" style="padding: 0px;margin: 0px">
          <?php if (!empty($adv)): ?>
         <?php foreach ($adv as $row): ?>
             <div style="padding: 10px 0px 0px 0px;">
                     <div class="content">
                          <a href="<?php echo base_url($row->link) ?>"><img
-                        src="<?php echo public_url('uploads/adv/adv/' . $row->images) ?>"></a>
+                        src="<?php echo public_url('uploads/adv/adv/' . $row->images) ?>" style="width: 320px"></a>
                     </div>
                 
         </div>
         <?php endforeach ?>
     <?php endif ?>
+    </div>
+      </div>
     </div>
 <div id="fb-root"></div>
 <script>(function (d, s, id) {

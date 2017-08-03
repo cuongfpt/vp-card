@@ -18,7 +18,7 @@
          <?php endif ?>
         </div>
     <div class="col-sm-9 col-md-9" style="padding-right: 0;">
-        <div class="well">
+        <div class="well" style="background: #fff;">
             <h1>
                 <span ><?php echo $info->title ?></span></h1>
             <div class="text-detail">

@@ -25,7 +25,7 @@
                             <?php foreach ($list as $row): ?>
                                  <?php if($row->parent_id !=-1){?>
                                  <?php if($i==1){?>
-                                <li>
+                                <li style="background: #fff">
                                     <?php echo $row->description?>
                                 </li>
                                  <?php }?>

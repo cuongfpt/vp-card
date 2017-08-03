@@ -12,11 +12,9 @@
                 </div>
             </div>
         </div>
-        <div class="items-right">
-        <div class="app-right">
+       
              <?php $this->load->view('site/right-cat') ?>
-        </div>
-        </div>
+       
     </div>
 </div>
 <?php $this->load->view('site/footer') ?>
