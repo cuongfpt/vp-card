@@ -31,8 +31,14 @@
                                 <?php }?>
                             <?php endforeach ?>
                             </ul>
+                            <div class="col-md-4" style="margin-top:20px;float:right;  ">
+                    <a href="https://www.youtube.com/channel/UCxti6iKqWj7_vRQMqNEDA_g" target="_blank" class="btn-social btn-youtube"><i class="fa fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/vcardvn/" target="_blank" class="btn-social btn-facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="https://plus.google.com/107600997067656677331 " target="_blank" class="btn-social btn-google-plus"><i class="fa fa-google-plus"></i></a>
+                </div>
                         </div>
                     </div>
+
                 </div>
             </div>
             <script>

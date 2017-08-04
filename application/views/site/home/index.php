@@ -2,7 +2,7 @@
     <div class="slider-news col-md-8">
     <div class="title-news-sale" style="padding-left: 20px;">
         <h1 class="h1GameNapThe">
-                <a href="#" style="font-weight: bold;">Game nạp thẻ vinplay
+                <a href="#" style="font-weight: bold;">ĐỐI TÁC PHÂN PHỐI THẺ VINPLAY CARD
                     <i class="fa fa-angle-right"></i></a>
             </h1>
     </div>
