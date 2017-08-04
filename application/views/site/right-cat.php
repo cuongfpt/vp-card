@@ -1,7 +1,7 @@
  <div class="items-right">
         <div class="app-right">
 <div class="news-sale col-md-4" style="margin-bottom: 10px">
-    <div class="title-news-sale" style="padding-top: 20px;">
+    <div class="title-news-sale">
             <a href="/tin-tuc">Tin tức - Khuyến mại <i class="fa fa-angle-right"></i></a>
         </div>
         <?php if (!empty($listsale)): ?>
@@ -31,11 +31,11 @@
                  <?php endif ?>
     </div>
   
-    <div class="items-right col-md-4" style="padding: 0px;margin: 0px">
+    <div class="items-right col-md-4" style="padding: 0px;margin: 0px;padding-left: 5px;">
 
        <div class="fb-page" data-href="<?php echo $linkface?>" data-tabs="timeline" data-width="320" data-height="200" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="<?php echo $linkface?>" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ShopMyPhamQuanAoOder/">Vinplay.</a></blockquote></div>
     </div>
-    <div class="items-right col-md-4" style="padding: 0px;margin: 0px">
+    <div class="items-right col-md-4" style="padding: 0px;margin: 0px;;padding-left: 5px;">
          <?php if (!empty($adv)): ?>
         <?php foreach ($adv as $row): ?>
             <div style="padding: 10px 0px 0px 0px;">

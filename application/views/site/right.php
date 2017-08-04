@@ -1,5 +1,5 @@
 <div class="news-sale col-md-3">
-    <div class="title-news-sale" style="padding-top: 20px;">
+    <div class="title-news-sale">
             <a href="/tin-tuc">Tin tức - Khuyến mại <i class="fa fa-angle-right"></i></a>
         </div>
         <?php if (!empty($listsale)): ?>
