@@ -24,7 +24,12 @@ ul li {
 html {
     overflow-y: scroll;
 }
-
+.fb-like {
+    background: #f1f1f1;
+    width: 100%;
+    border: 1px solid #e2e2e2;
+    padding: 10px 0px 0px 10px;
+}
 #container {
     width: 100%;
     margin: 0 auto;
