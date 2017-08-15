@@ -30,6 +30,7 @@ Class News_model extends MY_Model
             ->where('ExpireDate <=', $expiredate)
             ->where('isActive', 1);
         $this->db->order_by('orderNo', 'ASC');
+          $this->db->order_by('createTime', 'DESC');
         $query = $this->db->get($this->table);
 
         if ($query->result()) {
