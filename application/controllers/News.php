@@ -12,7 +12,21 @@ class News extends MY_Controller
         $this->load->model('Category_model');
 
     }
+  function index()
+    {
+        $listguide = $this->News_model->get_list_news_Guide();
+        $this->data['guide'] = $listguide;
+        $menufooter = $this->Category_model->get_category_footer();
+        $this->data['menufooter'] = $menufooter;
+         //list child cat
+        $listcat = $this->Category_model->get_category_guide_parent();
+        $this->data['listcat'] = $listcat;
 
+        $info = $this->News_model->get_list_news_guide_detail();
+        $this->data['info'] = $info;
+         $this->data['temp'] = 'site/news/guide-news';
+        $this->load->view('site/main-cat', $this->data);
+    }
 
     function detail()
     {
@@ -83,12 +97,10 @@ class News extends MY_Controller
         if (preg_match_all('/\d+/', $last, $numbers))
             $id = end($numbers[0]);
         //list child cat
-        $listcat = $this->Category_model->get_category_parent($id);
+        $listcat = $this->Category_model->get_category_guide_parent();
         $this->data['listcat'] = $listcat;
-
-        $info = $this->News_model->get_info($id);
-        $this->data['info'] = $info;
-
+        $info1 = $this->News_model->get_info($id);
+        $this->data['info'] = $info1;
         //list tin faq
         $listfaq = $this->Faq_model->get_list_faq();
         $this->data['faq'] = $listfaq;

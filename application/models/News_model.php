@@ -56,6 +56,7 @@ Class News_model extends MY_Model
             return FALSE;
         }
     }
+     
     function get_count_news_home()
     {
         $date = new DateTime();
@@ -152,6 +153,21 @@ Class News_model extends MY_Model
         $query = $this->db->get($this->table);
         if ($query->num_rows()) {
             return $query->num_rows();
+        } else {
+            return FALSE;
+        }
+    }
+     function get_list_news_guide_detail()
+    {
+        $date = new DateTime();
+        $expiredate = date_format($date, 'Y-m-d');
+        $this->db->where('isguide', 1)
+            ->where('ExpireDate <=', $expiredate)
+            ->where('isActive', 1);
+        $query = $this->db->get($this->table);
+
+        if ($query->result()) {
+            return $query->result();
         } else {
             return FALSE;
         }

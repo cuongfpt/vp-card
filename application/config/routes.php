@@ -66,6 +66,7 @@ $route['vong-quay-vip'] = "vqvip";
 $route['tim-kiem'] = "search";
 $route['lien-he'] = "contact";
 $route['vong-quay-vip'] = "vqvip";
+$route['huong-dan'] = "news";
 $route['404_override'] = '';
 $route['the-vinplay'] = 'landding';
 $route['translate_uri_dashes'] = FALSE;

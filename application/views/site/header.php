@@ -13,7 +13,7 @@
                                <?php foreach ($menufooter as $row): ?>
                                 <?php if ($row->typepage == 1){ ?>
                                     <li>
-                                        <a class="mn-desktop" href="<?php echo base_url('huong-dan/' . $row->seolink . '-' . $row->id) ?>"><?php echo $row->catname ?></a>
+                                        <a class="mn-desktop" href="<?php echo base_url('huong-dan')?>"><?php echo $row->catname ?></a>
                                     </li>
                                 <?php } else if ($row->typepage == 4){ ?>
                                     <li>

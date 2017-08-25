@@ -5,6 +5,7 @@
         <div class="col-sm-3 col-md-3" style="padding-right: 0; padding-left: 0;">
          <?php if ($listcat != null): ?>
             <?php foreach ($listcat as $row): ?>
+                <?php if ($row->parent_id != "-1"): ?>
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
@@ -14,16 +15,19 @@
                     <div id="collapse8" class="panel-collapse collapse" aria-expanded="false" style="height: 646px;">
                     </div>
                  </div>
+               <?php endif ?>
               <?php endforeach ?>
          <?php endif ?>
         </div>
     <div class="col-sm-9 col-md-9" style="padding-right: 0;">
         <div class="well" style="background: #fff;">
+        <?php if($info!=null) :?>
             <h1>
                 <span ><?php echo $info->title ?></span></h1>
             <div class="text-detail">
                  <p><?php echo $info->content ?></p>
             </div>
+             <?php endif ?>
         </div>
     </div>
 </div>

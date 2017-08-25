@@ -63,6 +63,18 @@ Class Category_model extends MY_Model
         }
 
     }
+     function get_category_guide_parent(){
+        $this->db->where('typepage',1);
+         $this->db->order_by('orderno','asc');
+        $query = $this->db->get($this->table);
+        if($query->result())
+        {
+            return $query->result();
+        }else{
+            return FALSE;
+        }
+
+    }
       function get_list_contact()
     {
          $this->db->where('typepage',5);

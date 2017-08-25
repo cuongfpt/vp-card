@@ -1,6 +1,6 @@
 <div class="news-sale col-md-3">
     <div class="title-news-sale">
-            <a href="/tin-tuc">Tin tức - Khuyến mại <i class="fa fa-angle-right"></i></a>
+            <a href="/tin-tuc" style="color:#428bca">Tin tức - Khuyến mại <i class="fa fa-angle-right"></i></a>
         </div>
         <?php if (!empty($listsale)): ?>
         
@@ -29,9 +29,9 @@
                  <?php endif ?>
     </div>
     <div class="news-sale col-md-3">
-        <div class="fb-page" data-href="<?php echo $linkface ?>" data-small-header="false"
-             data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-            <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a
+        <div class="fb-page" data-href="<?php echo $linkface ?>" data-small-header="false" data-width="220px"
+             data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false">
+            <blockquote cite="<?php echo $linkface ?>" class="fb-xfbml-parse-ignore"><a
                     href="<?php echo $linkface ?>">VinPlay.com</a></blockquote>
         </div>
     </div>
