@@ -1,8 +1,8 @@
 <meta charset="utf-8">
 
-<title></title>
-<meta id="metaKeywords" name="keywords" content=""/>
-<meta id="metaDescription" name="description" content=""/>
+<title><?php echo $meta_title ?></title>
+ <meta id="metaKeywords" name="keywords" content="<?php echo $meta_keyword ?>"/>
+            <meta id="metaDescription" name="description" content="<?php echo $meta_description ?>"/>
 <meta name="author" content="vinplay.com"/>
 <meta http-equiv="REFRESH" content="1800"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />

@@ -7,6 +7,7 @@ class News extends MY_Controller
     {
         parent::__construct();
         $this->load->model('News_model');
+         $this->load->model('system_model');
         $this->load->model('Adv_model');
         $this->load->model('Faq_model');
         $this->load->model('Category_model');
@@ -14,6 +15,13 @@ class News extends MY_Controller
     }
   function index()
     {
+         $list = $this->system_model->get_list();
+        foreach($list as $item)
+        {
+            $this->data['meta_title'] = "Hướng dẫn";
+            $this->data['meta_keyword'] = $item->keyword;
+            $this->data['meta_description'] = $item->metadescription;
+        }
         $listguide = $this->News_model->get_list_news_Guide();
         $this->data['guide'] = $listguide;
         $menufooter = $this->Category_model->get_category_footer();
@@ -34,6 +42,11 @@ class News extends MY_Controller
         if (preg_match_all('/\d+/', $last, $numbers))
             $id = end($numbers[0]);
         $info = $this->News_model->get_info($id);
+       
+            $this->data['meta_title'] = $info->titlepage;
+            $this->data['meta_keyword'] = $info->keyword;
+            $this->data['meta_description'] = $info->metadescription;
+        
         $this->data['info'] = $info;
         $list = $this->News_model->get_list_news_other($id, $info->catid);
         $this->data['list'] = $list;
@@ -64,6 +77,12 @@ class News extends MY_Controller
         if (preg_match_all('/\d+/', $last, $numbers))
             $id = end($numbers[0]);
         $listcat = $this->Category_model->get_category_parent($id);
+         foreach($listcat as $item)
+        {
+            $this->data['meta_title'] = $item->titlePage;
+            $this->data['meta_keyword'] = $item->keyword;
+            $this->data['meta_description'] = $item->metaDescription;
+        }
         $this->data['listcat'] = $listcat;
         //list adv
         $listAdv = $this->Adv_model->get_adv_by_position(3);
@@ -93,6 +112,13 @@ class News extends MY_Controller
         echo json_encode($list);
     }
     function newsguide(){
+         $list = $this->system_model->get_list();
+        foreach($list as $item)
+        {
+            $this->data['meta_title'] = "Hướng dẫn";
+            $this->data['meta_keyword'] = $item->keyword;
+            $this->data['meta_description'] = $item->metadescription;
+        }
         $last = end($this->uri->segments);
         if (preg_match_all('/\d+/', $last, $numbers))
             $id = end($numbers[0]);

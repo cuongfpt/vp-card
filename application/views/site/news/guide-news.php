@@ -74,7 +74,7 @@
                         ht+=' <tr>';
                         ht+='   <td>';
                         ht+='     <span class="text-primary"></span>';
-                        ht+='      <a href="../huong-dan-dt/'+value.seoLink+'-'+value.id+'">'+value.title+'</a>';
+                        ht+='      <a href="../huong-dan/'+value.seoLink+'-'+value.id+'">'+value.title+'</a>';
                         ht+='   </td>';
                         ht+=' </tr>';
                         ht+='           </tbody>';

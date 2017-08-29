@@ -6,13 +6,21 @@ class Contact extends MY_Controller
     function __construct()
     {
         parent::__construct();
-        $this->load->model('Faq_model');
+        $this->load->model('system_model');
+         $this->load->model('Faq_model');
         $this->load->model('Category_model');
         $this->load->model('News_model');
         $this->load->model('Adv_model');
          $this->load->model('Contact_model');
     }
 function index(){  
+     $list = $this->system_model->get_list();
+        foreach($list as $item)
+        {
+            $this->data['meta_title'] = "Liên hệ";
+            $this->data['meta_keyword'] = $item->keyword;
+            $this->data['meta_description'] = $item->metadescription;
+        }
         //list tin faq
         $listfaq = $this->Faq_model->get_list_faq();
         $this->data['faq'] = $listfaq;
@@ -59,7 +67,12 @@ function detail(){
 
         $menuContact = $this->Category_model->get_category_by_contact();
         $this->data['menuContact'] = $menuContact;
-
+ foreach($list as $item)
+        {
+            $this->data['meta_title'] = $item->titlePage;
+            $this->data['meta_keyword'] = $item->keyword;
+            $this->data['meta_description'] = $item->metaDescription;
+        }
         $this->data['temp'] = 'site/contact/index';
         $this->load->view('site/main-cat', $this->data);
     }

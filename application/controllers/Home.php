@@ -14,6 +14,13 @@ class Home extends MY_Controller
     }
     public function index()
     {
+        $list = $this->system_model->get_list();
+        foreach($list as $item)
+        {
+            $this->data['meta_title'] = $item->titlepage;
+            $this->data['meta_keyword'] = $item->keyword;
+            $this->data['meta_description'] = $item->metadescription;
+        }
         //list danh sach trang chủ
         $listhome = $this->News_model->get_list_news_home();
         $this->data['listhome'] =$listhome;
