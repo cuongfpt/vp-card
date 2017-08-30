@@ -77,11 +77,12 @@ class News extends MY_Controller
         if (preg_match_all('/\d+/', $last, $numbers))
             $id = end($numbers[0]);
         $listcat = $this->Category_model->get_category_parent($id);
-         foreach($listcat as $item)
+        $list = $this->system_model->get_list();
+        foreach($list as $item)
         {
-            $this->data['meta_title'] = $item->titlePage;
+            $this->data['meta_title'] = "Tin tức";
             $this->data['meta_keyword'] = $item->keyword;
-            $this->data['meta_description'] = $item->metaDescription;
+            $this->data['meta_description'] = $item->metadescription;
         }
         $this->data['listcat'] = $listcat;
         //list adv
@@ -108,7 +109,7 @@ class News extends MY_Controller
     }
     function get_list_new_by_cat(){
         $catid =$_GET['catid'];
-        $list = $this->News_model->get_list_news_category($catid);
+        $list = $this->News_model->get_list_news_guide_category($catid);
         echo json_encode($list);
     }
     function newsguide(){

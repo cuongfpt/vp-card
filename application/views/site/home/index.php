@@ -10,7 +10,9 @@
             <div id="gallery-it">
                 <?php if (!empty($listhome)): ?>
                      <?php foreach ($listhome as $row): ?>
-                         <?php if($row->description=="" || $row->body==""):?>
+                        <?php $desc= $row->description ?>
+                         <?php $body= $row->description ?>
+                         <?php if($desc=="" || $body==""):?>
                             <a href="#"><img src="<?php echo public_url('uploads/news/' . $row->images) ?>"><span> </span></a>
                         <?php else:?>
                              <a href="<?php echo base_url('bai-viet/' . $row->seolink . '-' . $row->id) ?>">

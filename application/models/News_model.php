@@ -29,7 +29,7 @@ Class News_model extends MY_Model
         $this->db->where('issale', 1)
             ->where('ExpireDate <=', $expiredate)
             ->where('isActive', 1);
-        $this->db->order_by('orderNo', 'ASC');
+       // $this->db->order_by('orderNo', 'ASC');
           $this->db->order_by('createTime', 'DESC');
         $query = $this->db->get($this->table);
 
@@ -171,5 +171,26 @@ Class News_model extends MY_Model
         } else {
             return FALSE;
         }
+    }
+     function get_list_news_guide_category($catid)
+    {
+        $date = new DateTime();
+        $expiredate = date_format($date, 'Y-m-d');
+        $this->db->select('title,news.description,createTime,news.seoLink,news.id,news.images,expiredate,isactive')
+            ->from('news')
+            ->join('category', 'news.catId =category.id')
+            ->where('catId', $catid)
+            ->where('ExpireDate <=', $expiredate)
+            ->where('isActive', 1)
+             ->where('isguide', 1)
+            ->or_where('parent_id', $catid);
+        $query = $this->db->get();
+
+        if ($query->result()) {
+            return $query->result();
+        } else {
+            return FALSE;
+        }
+
     }
 }
