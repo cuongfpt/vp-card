@@ -9,10 +9,10 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse8" id="<?php echo $row->id?>" class="collapsed" aria-expanded="false"><span class=""></span><?php echo $row->catname?></a>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $row->id?>" id="<?php echo $row->id?>"><span class=""></span><?php echo $row->catname?></a>
                         </h4>
                     </div>
-                    <div id="collapse8" class="panel-collapse collapse" aria-expanded="false" style="height: 646px;">
+                    <div id="collapse<?php echo $row->id?>" class="panel-collapse collapse"  style="height: 646px;">
                     </div>
                  </div>
                <?php endif ?>
@@ -48,7 +48,8 @@
         listnew($(".panel-title > a").attr('id'));
         $('.panel-title > a').click(function(){
             if ($(this).attr('class') != 'active'){
-                $('#collapse8').slideUp();
+                var num =$(this).attr('id');
+                $('#collapse'+num).slideUp();
                 $(this).next().slideToggle();
                 $('panel-title > a').removeClass('active');
                 $(this).addClass('active');
@@ -82,7 +83,7 @@
                         ht+='</div>';
                     });
                    
-                $("#collapse8").html(ht);
+                $("#collapse"+$catid).html(ht);
             }
         });
     }
