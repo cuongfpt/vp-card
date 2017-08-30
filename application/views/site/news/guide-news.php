@@ -59,7 +59,7 @@
     function listnew($catid){
         var ht = '';
         $.ajax({
-            url: "<?php echo base_url('news/get_list_new_by_cat'); ?>",
+            url: "<?php echo base_url('news/get_list_new_guide_by_cat'); ?>",
             type: "GET",
             data: {
                 catid: $catid,

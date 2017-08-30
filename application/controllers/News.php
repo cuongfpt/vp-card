@@ -109,6 +109,11 @@ class News extends MY_Controller
     }
     function get_list_new_by_cat(){
         $catid =$_GET['catid'];
+        $list = $this->News_model->get_list_news_category($catid);
+        echo json_encode($list);
+    }
+     function get_list_new_guide_by_cat(){
+        $catid =$_GET['catid'];
         $list = $this->News_model->get_list_news_guide_category($catid);
         echo json_encode($list);
     }
